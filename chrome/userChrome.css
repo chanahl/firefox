@@ -1,0 +1,64 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*
+#nav-bar { visibility: collapse; }
+*/
+
+/**
+ * navigation bar
+ */
+#nav-bar {
+  position: relative !important;
+  z-index: 1 !important;
+  height: 5px !important;
+  min-height: 5px !important;
+  margin-bottom: -5px !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+}
+#nav-bar:active,
+#nav-bar:focus-within {
+  height: auto !important;
+  margin-bottom: 0px !important;
+  opacity: 1 !important;
+  overflow: show !important;
+}
+#content-deck {
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+/**
+ * context menu
+ * https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/
+ */
+#context-navigation, #context-sep-navigation { 
+  display: none !important 
+}
+menupopup, popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup {
+  -moz-appearance: none !important;
+  background: #202020 !important;
+  border: 1px solid #606060 !important;
+  padding: 6px 0px 6px 0px  !important;
+}
+menupopup menuseparator {
+  -moz-appearance: none !important;
+  background: #808080 !important;
+  margin: 2px 6px 2px 6px !important;
+  padding: 0 !important;
+  border-top: none !important;
+  border-color: transparent !important;
+}
+menupopup menu, menuitem {
+  color: #E0E0E0 !important;
+}
+menupopup menu:hover, menuitem:hover {
+  color:#E4E4E4 !important;
+  background-color: #101010 !important;
+}
+.menu-right {
+  filter: invert(50%) !important;
+}
