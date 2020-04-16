@@ -62,3 +62,30 @@ menupopup menu:hover, menuitem:hover {
 .menu-right {
   filter: invert(50%) !important;
 }
+
+/**
+ * https://old.reddit.com/comments/fwhlva//fmolndz
+ *
+ * false
+ * browser.urlbar.openViewOnFocus
+ * browser.urlbar.update1
+ * browser.urlbar.update1.interventions
+ * browser.urlbar.update1.searchTips
+ * browser.urlbar.update1.view.stripHttps
+ */
+#urlbar[breakout][breakout-extend]:not([open]) {
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding-block: 0px !important;
+  padding-inline: 0px !important;
+}
+#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
+  animation-name: none !important;
+}
+#urlbar[breakout][breakout-extend]:not([open]) > #urlbar-background {
+  box-shadow: none !important;
+}
