@@ -1,0 +1,8 @@
+bind j scrollline 2
+bind k scrollline -2
+bind y clipboard yank
+
+bind <C-d> scrollpage 0.25
+bind <C-u> scrollpage -0.25
+bind <C-f> scrollpage 0.5
+bind <C-b> scrollpage -0.5
